@@ -56,7 +56,7 @@ class PluginsController extends BaseController {
 
         return View::make('plugins.show')
             ->with('title', 'Plugins - Edit')
-            ->with('plugins', $plugin);
+            ->with('plugin', $plugin);
 	}
 
 	/**
@@ -71,7 +71,7 @@ class PluginsController extends BaseController {
 
         return View::make('plugins.edit')
             ->with('title', 'Plugins - Edit')
-            ->with('plugins', $plugin);
+            ->with('plugin', $plugin);
 	}
 
 	/**
