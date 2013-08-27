@@ -23,6 +23,7 @@
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		
 		<![endif]-->
 
 	
@@ -82,12 +83,12 @@
 
 		<!-- ./ container -->
 
-		<!-- Javascripts
+		<!-- Javascript
 		================================================== -->
+
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
-		<script src="{{ asset('js/restfulizer.js') }}"></script> <!-- Thanks to Zizaco for this script:  http://zizaco.net  -->
-		<script src="{{ asset('js/bootstrapSwitch.js') }}"></script> <!-- Bootstrap switch from https://github.com/nostalgiaz/bootstrap-switch.git -->
-
+		<script src="{{ asset('js/restfulizer.js') }}"></script> 
+		<script src="{{ asset('js/bootstrapSwitch.js') }}"></script>
 	</body>
 </html>

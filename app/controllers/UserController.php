@@ -189,7 +189,6 @@ class UserController extends BaseController {
 
 		}
 	}
-
 	/**
 	 * Activate a new User
 	 */
@@ -228,8 +227,6 @@ class UserController extends BaseController {
 		    Session::flash('error', 'You have already activated this account.');
 			return Redirect::to('/');
 		}
-
-
 	}
 
 	/**
@@ -360,7 +357,7 @@ class UserController extends BaseController {
 		{
 			try
 			{
-			    $user      = Sentry::getUserProvider()->findByLogin($input['email']);
+			    $user = Sentry::getUserProvider()->findByLogin($input['email']);
 			    $data['resetCode'] = $user->getResetPasswordCode();
 			    $data['userId'] = $user->getId();
 			    $data['email'] = $input['email'];

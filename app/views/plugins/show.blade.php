@@ -1,8 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-	<legend>{{ $title }}&nbsp;
-		<a href="{{ URL::to('plugins/create') }}" class="btn"><i class="icon-plus"></i>&nbsp;Add</a>
+	<legend>{{ $title }}
     </legend>
 
 	<table class="table table-bordered table-condensed table-striped">

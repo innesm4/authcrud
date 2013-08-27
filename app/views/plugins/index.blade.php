@@ -6,13 +6,7 @@
         
     </legend>
 
-    <div class="row-fluid">
-        <div class="span4 pagination" style="margin-top: -5px;">
-            <ul><li>{{ $plugins->links() }}</li></ul>
-        </div>
-   
-        <div class="span4">&nbsp;</div>
-    </div>
+    
 
     <table class="table table-consended table-striped table-bordered">
     	<tr>
@@ -40,6 +34,14 @@
 	    </tr>
 	    @endforeach
 	</table>
+
+    <div class="row-fluid">
+        <div class="span4 pagination" style="margin-top: -5px;">
+            <ul><li>{{ $plugins->links() }}</li></ul>
+        </div>
+   
+        <div class="span4">&nbsp;</div>
+    </div>
 
     
 @endsection
