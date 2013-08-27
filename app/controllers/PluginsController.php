@@ -15,7 +15,6 @@ class PluginsController extends BaseController {
             ->with('title', 'Plugins - List')
             ->with('plugins', $plugins);
 	}
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -26,7 +25,6 @@ class PluginsController extends BaseController {
 		return View::make('plugins.create')
             ->with('title', 'Plugins - Add');
 	}
-
 	/**
 	 * Store a newly created resource in storage.
 	 *

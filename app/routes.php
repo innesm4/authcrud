@@ -11,13 +11,14 @@
 |
 */
 
-
 Route::get('/', function()
 {
 	return View::make('hello');
 });
 
 Route::controller('users', 'UserController');
+
+Route::resource('search', 'SearchController');
 
 Route::resource('groups', 'GroupController');
 

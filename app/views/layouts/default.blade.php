@@ -45,6 +45,7 @@
 							<li {{ (Request::is('/') ? 'class="active"' : '') }}><a href="{{ URL::to('') }}">Home</a></li>
 							@if (Sentry::check() && Sentry::getUser()->hasAccess('users'))
 								<li {{ (Request::is('plugins*') ? 'class="active"' : '') }}><a href="{{ URL::to('/plugins') }}">Plugins</a></li>
+								<li {{ (Request::is('search*') ? 'class="active"' : '') }}><a href="{{ URL::to('/search') }}">Search</a></li>
 							@endif
 							@if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))
 								<li {{ (Request::is('users*') ? 'class="active"' : '') }}><a href="{{ URL::to('/users') }}">Users</a></li>
