@@ -27,7 +27,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return array(
 	|
 	*/
 
-	'port' => 587,
+	'port' => 465,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'mark.innes@fifthring.com', 'name' => 'Fifth Ring CRUD'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -66,7 +66,7 @@ return array(
 	|
 	*/
 
-	'encryption' => 'tls',
+	'encryption' => 'ssl',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'mark.innes@fifthring.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -92,6 +92,6 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => 'mark3792',
 
 );
