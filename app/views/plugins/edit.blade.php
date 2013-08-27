@@ -16,20 +16,36 @@
             <td>{{ Form::text('name',$plugin->name,array('class'=>'span5 validate[required,custom[onlyLetterSp]]','id'=>'name')) }}</td>
         </tr>
         <tr>
-            <td>Address</td>
-            <td>{{ Form::textarea('address',$plugin->address,array('class'=>'span8','rows'=>'2')) }}</td>
+            <td>URL</td>
+            <td>{{ Form::text('url',$plugin->url,array('class'=>'span5','id'=>'name')) }}</td>
         </tr>
         <tr>
-            <td>DOB</td>
-            <td>{{ Form::text('dob',$plugin->dob,array('id'=>'dob','class'=>'span2')) }}</td>
+            <td>Price</td>
+            <td>{{ Form::text('price',$plugin->price,array('class'=>'span5 validate[required]','id'=>'price')) }}</td>
         </tr>
         <tr>
-            <td>Gender</td>
-            <td>{{ Form::select('gender',array('M'=>'Male','F'=>'Female'),$plugin->gender,array('class'=>'span2')) }}</td>
+            <td>Description</td>
+            <td>{{ Form::textarea('description',$plugin->description,array('class'=>'span8','rows'=>'2')) }}</td>
         </tr>
         <tr>
-            <td>Status</td>
-            <td>{{ Form::select('active',array('1'=>'Active','0'=>'Non-Active'),$plugin->active,array('class'=>'span2')) }}</td>
+            <td>Developer</td>
+            <td>{{ Form::text('developer',$plugin->developer,array('id'=>'developer','class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>{{ Form::select('type',array('3'=>'Accesories','2'=>'Extension','1'=>'Plugin','0'=>'Module'),$plugin->type,array('class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Latest Version</td>
+            <td>{{ Form::text('latestversion',$plugin->latestversion,array('id'=>'latestversion','class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Documentation URL</td>
+            <td>{{ Form::text('documentationurl',$plugin->documentationurl,array('id'=>'documentationurl','class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Changelog URL</td>
+            <td>{{ Form::text('changelogurl',$plugin->changelogurl,array('id'=>'changelogurl','class'=>'span5')) }}</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
