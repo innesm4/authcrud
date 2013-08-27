@@ -114,6 +114,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
+		'Scalia\SphinxSearch\SphinxSearchServiceProvider',
 		'Binarix\FoundationPagination\FoundationPaginationServiceProvider'
 	),
 
@@ -179,6 +180,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+		'SphinxSearch' 	  => 'Scalia\SphinxSearch\SphinxSearchFacade',
 		'Sentry'		  => 'Cartalyst\Sentry\Facades\Laravel\Sentry'
 
 	),

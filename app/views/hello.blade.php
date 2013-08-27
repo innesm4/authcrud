@@ -22,10 +22,9 @@ Fifth Ring CRUD App
 	<h4>User Options</h4>
 	<div class="well">
 		<button class="btn btn-info" onClick="location.href='{{ URL::to('plugins') }}'">View Plugins</button>
-		<button class="btn btn" onClick="location.href='{{ URL::to('plugins/create') }}'">Add Plugin</button>
+		<button class="btn btn-info" onClick="location.href='{{ URL::to('plugins/create') }}'">Add Plugin</button>
 	</div>
 @endif 
-
 
 @if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))
 	<h4>Admin Options</h4>
@@ -34,6 +33,5 @@ Fifth Ring CRUD App
 		 <button class="btn btn-info" onClick="location.href='{{ URL::to('groups') }}'">View Groups</button>
 	</div>
 @endif 
- 
- 
+
 @stop

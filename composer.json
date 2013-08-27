@@ -3,7 +3,8 @@
 		"laravel/framework": "4.0.*@dev",
 		"cartalyst/sentry": "2.0.*",
 		"way/generators": "dev-master",
-		"binarix/foundation-pagination": "dev-master"
+		"binarix/foundation-pagination": "dev-master",
+		"scalia/sphinxsearch": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
