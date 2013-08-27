@@ -9,7 +9,11 @@ class PluginsController extends BaseController {
 	 */
 	public function index()
 	{
-		//
+	    $plugins = Plugin::where('id','>=',1)->paginate(5);
+
+        return View::make('plugins.index')
+            ->with('title', 'Plugins- List')
+            ->with('plugins', $plugins);
 	}
 
 	/**
@@ -19,7 +23,8 @@ class PluginsController extends BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('plugins.create')
+            ->with('title', 'Plugins - Add');
 	}
 
 	/**
@@ -29,7 +34,14 @@ class PluginsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+		$plugin = new Plugin;
+        $plugin->add();
+
+        if($plugin){
+            return Redirect::route('plugins.index')
+                ->with('title', 'Plugins - List')
+                ->with('success', 'Plugin is Inserted Successfully');  
+        }
 	}
 
 	/**
@@ -40,7 +52,11 @@ class PluginsController extends BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$plugin = Plugin::find($id);
+
+        return View::make('plugins.show')
+            ->with('title', 'Plugins - Edit')
+            ->with('plugins', $plugin);
 	}
 
 	/**
@@ -51,7 +67,11 @@ class PluginsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		 $plugin = Plugin::find($id);
+
+        return View::make('plugins.edit')
+            ->with('title', 'Plugins - Edit')
+            ->with('plugins', $plugin);
 	}
 
 	/**
@@ -62,7 +82,14 @@ class PluginsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$plugin = new Plugin;
+        $plugin->edit($id);
+
+        if($plugin){
+            return Redirect::route('plugins.index')
+                ->with('title', 'Plugins - List')
+                ->with('success', 'Plugin is Updated Successfully');  
+        }
 	}
 
 	/**
@@ -73,7 +100,14 @@ class PluginsController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$plugin = new Plugin;
+        $plugin->del($id);
+
+        if($plugin){
+            return Redirect::route('plugins.index')
+                ->with('title', 'Plugins - List')
+                ->with('success', 'Plugin is Deleted Successfully');  
+        }
 	}
 
 }

@@ -21,9 +21,4 @@ Route::controller('users', 'UserController');
 
 Route::resource('groups', 'GroupController');
 
-
-
-
-
-
 Route::resource('plugins', 'PluginsController');
