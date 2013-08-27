@@ -42,6 +42,9 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li {{ (Request::is('/') ? 'class="active"' : '') }}><a href="{{ URL::to('') }}">Home</a></li>
+							@if (Sentry::check() && Sentry::getUser()->hasAccess('users'))
+								<li {{ (Request::is('plugins*') ? 'class="active"' : '') }}><a href="{{ URL::to('/plugins') }}">Plugins</a></li>
+							@endif
 							@if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))
 								<li {{ (Request::is('users*') ? 'class="active"' : '') }}><a href="{{ URL::to('/users') }}">Users</a></li>
 								<li {{ (Request::is('groups*') ? 'class="active"' : '') }}><a href="{{ URL::to('/groups') }}">Groups</a></li>

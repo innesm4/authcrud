@@ -21,7 +21,8 @@ Fifth Ring CRUD App
 @if (Sentry::check() && Sentry::getUser()->hasAccess('users'))
 	<h4>User Options</h4>
 	<div class="well">
-		<p>Hello User</p>
+		<button class="btn btn-info" onClick="location.href='{{ URL::to('plugins') }}'">View Plugins</button>
+		<button class="btn btn" onClick="location.href='{{ URL::to('plugins/create') }}'">Add Plugin</button>
 	</div>
 @endif 
 
