@@ -54,6 +54,13 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
+App::error(function(PdoException $e)
+{
+    Log::error($exception);
+
+    return Response::make('Database error! ' . $exception->getCode());
+});
+
 /*
 |--------------------------------------------------------------------------
 | Require The Filters File

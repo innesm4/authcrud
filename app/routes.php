@@ -22,3 +22,15 @@ Route::controller('users', 'UserController');
 Route::resource('groups', 'GroupController');
 
 Route::resource('plugins', 'PluginsController');
+
+Route::get('error', function() {
+    try
+    {
+        $pdo = DB::connection('mysql')->getPdo();
+    }
+    catch(\PDOException $exception)
+    {
+        return Response::make('Database error! ' . $exception->getCode());
+    }
+    return 'all fine';
+});
