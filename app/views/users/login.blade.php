@@ -7,7 +7,7 @@ Log In
 
 {{-- Content --}}
 @section('content')
-<h4>Login</h4>
+<h4>Log In</h4>
 <div class="well">
 	<form class="form-horizontal" action="{{ URL::to('users/login') }}" method="post">   
         {{ Form::token(); }}

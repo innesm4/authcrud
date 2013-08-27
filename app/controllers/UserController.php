@@ -12,7 +12,6 @@ class UserController extends BaseController {
 		//Check CSRF token on POST
 		$this->beforeFilter('csrf', array('on' => 'post'));
 		
-		//Enable the throttler.  [I am not sure about this...]
 		// Get the Throttle Provider
 		$throttleProvider = Sentry::getThrottleProvider();
 
@@ -118,7 +117,6 @@ class UserController extends BaseController {
 		}
 	}
 
-
 	/**
 	 * Register a new user. 
 	 *
@@ -170,7 +168,7 @@ class UserController extends BaseController {
 				//send email with link to activate.
 				Mail::send('emails.auth.welcome', $data, function($m) use($data)
 				{
-				    $m->to($data['email'])->subject('Welcome to Laravel4 With Sentry');
+				    $m->to($data['email'])->subject('Welcome to Fifth Ring CRUD');
 				});
 
 				//success!
@@ -210,7 +208,7 @@ class UserController extends BaseController {
 		    	$userGroup = Sentry::getGroupProvider()->findById(1);
 		    	$user->addGroup($userGroup);
 
-		        Session::flash('success', 'Your account has been activated. <a href="/users/login">Click here</a> to log in.');
+		        Session::flash('success', 'Your account has been activated.');
 				return Redirect::to('/');
 		    }
 		    else
@@ -331,9 +329,6 @@ class UserController extends BaseController {
 		return Redirect::to('/');
 	}
 
-
-	
-
 	/**
 	 * Forgot Password / Reset
 	 */
@@ -373,7 +368,7 @@ class UserController extends BaseController {
 			    // Email the reset code to the user
 				Mail::send('emails.auth.reset', $data, function($m) use($data)
 				{
-				    $m->to($data['email'])->subject('Password Reset Confirmation | Laravel4 With Sentry');
+				    $m->to($data['email'])->subject('Password Reset Confirmation | Fifth Ring CRUD');
 				});
 
 				Session::flash('success', 'Check your email for password reset information.');
@@ -412,7 +407,7 @@ class UserController extends BaseController {
 
 			    Mail::send('emails.auth.newpassword', $data, function($m) use($data)
 				{
-				    $m->to($data['email'])->subject('New Password Information | Laravel4 With Sentry');
+				    $m->to($data['email'])->subject('New Password Information | Fifth Ring CRUD');
 				});
 
 				Session::flash('success', 'Your password has been changed. Check your email for the new password.');

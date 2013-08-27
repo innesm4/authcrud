@@ -3,20 +3,28 @@
 {{-- Web site Title --}}
 @section('title')
 @parent
-Hello World
+Fifth Ring CRUD App
 @stop
 
 {{-- Content --}}
 @section('content')
 
-<h1>Hello World!</h1>
+<h1>Fifth Ring</h1>
 <div class="well">
-	<p>This is an example of <a href="https://github.com/laravel/laravel/tree/develop">Laravel 4</a> running with <a href="https://github.com/cartalyst/sentry">Sentry</a>. 
+	<p>CRUD application with Authorisation package.
 	@if (Sentry::check()) 
 		You are currently logged in.
 	@endif
 	</p>
 </div>
+
+@if (Sentry::check() && Sentry::getUser()->hasAccess('users'))
+	<h4>User Options</h4>
+	<div class="well">
+		<p>Hello User</p>
+	</div>
+@endif 
+
 
 @if (Sentry::check() && Sentry::getUser()->hasAccess('admin'))
 	<h4>Admin Options</h4>

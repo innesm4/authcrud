@@ -10,6 +10,6 @@
 		<p>To activate your account, <a href="{{  URL::to('users/activate', array('id' => $userId, urlencode($activationCode))) }}">click here.</a></p>
 		<p>Or point your browser to this address: <br /> {{  URL::to('users/activate', array('id' => $userId, urlencode($activationCode))) }}</p>
 		<p>Thank you, <br />
-			~The Admin Team</p>
+			~Mark Innes</p>
 	</body>
 </html>
