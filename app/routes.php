@@ -24,3 +24,6 @@ Route::resource('groups', 'GroupController');
 
 
 
+
+
+Route::resource('plugins', 'PluginsController');
