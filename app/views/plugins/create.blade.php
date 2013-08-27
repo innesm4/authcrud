@@ -16,20 +16,36 @@
             <td>{{ Form::text('name','',array('class'=>'span5 validate[required,custom[onlyLetterSp]]','id'=>'name')) }}</td>
         </tr>
         <tr>
-            <td>Address</td>
-            <td>{{ Form::textarea('address','',array('class'=>'span8','rows'=>'2')) }}</td>
+            <td>URL</td>
+            <td>{{ Form::text('url','',array('class'=>'span5 validate[required]','id'=>'name')) }}</td>
         </tr>
         <tr>
-            <td>DOB</td>
-            <td>{{ Form::text('dob','',array('id'=>'dob','class'=>'span2')) }}</td>
+            <td>Price</td>
+            <td>{{ Form::text('price','',array('class'=>'span5 validate[required]','id'=>'price')) }}</td>
         </tr>
         <tr>
-            <td>Gender</td>
-            <td>{{ Form::select('gender',array('M'=>'Male','F'=>'Female'),'M',array('class'=>'span2')) }}</td>
+            <td>Description</td>
+            <td>{{ Form::textarea('description','',array('class'=>'span8','rows'=>'2')) }}</td>
         </tr>
         <tr>
-            <td>Status</td>
-            <td>{{ Form::select('active',array('1'=>'Active','0'=>'Non-Active'),'1',array('class'=>'span2')) }}</td>
+            <td>Developer</td>
+            <td>{{ Form::text('developer','',array('id'=>'developer','class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>{{ Form::select('type',array('3'=>'Accesories','2'=>'Extension','1'=>'Plugin','0'=>'Module'),'0',array('class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Latest Version</td>
+            <td>{{ Form::text('latestversion','',array('id'=>'latestversion','class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Documentation URL</td>
+            <td>{{ Form::text('documentationurl','',array('id'=>'documentationurl','class'=>'span5')) }}</td>
+        </tr>
+        <tr>
+            <td>Changelog URL</td>
+            <td>{{ Form::text('changelogurl','',array('id'=>'changelogurl','class'=>'span5')) }}</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
