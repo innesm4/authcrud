@@ -12,7 +12,7 @@ class PluginsController extends BaseController {
 	    $plugins = Plugin::where('id','>=',1)->paginate(5);
 
         return View::make('plugins.index')
-            ->with('title', 'Plugins- List')
+            ->with('title', 'Plugins - List')
             ->with('plugins', $plugins);
 	}
 
@@ -55,7 +55,7 @@ class PluginsController extends BaseController {
 		$plugin = Plugin::find($id);
 
         return View::make('plugins.show')
-            ->with('title', 'Plugins - Edit')
+            ->with('title', 'Plugins - View')
             ->with('plugin', $plugin);
 	}
 

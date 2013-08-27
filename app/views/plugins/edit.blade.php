@@ -57,16 +57,4 @@
     </table>  
     {{ Form::close() }}
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $("#form1").validationEngine()
-            $("#dob").datepicker({
-                dateFormat: 'yy/mm/dd',
-                changeMonth: true,
-                changeYear: true,
-                yearRange: '1980:2020'
-            })
-        }) 
-    </script>
-
 @endsection
