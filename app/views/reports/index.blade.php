@@ -3,14 +3,17 @@
 @section('content')
     <legend>{{ $title }}&nbsp;
     </legend>
-    {{ Form::open(array('route'=>'reports.index','method'=>'POST')) }}
-  
-        <tr>
-            <td>&nbsp;</td>
-            <td>
-            	{{ Form::submit('Query1',array('class'=>'btn')) }}
-            </td>
-        </tr>
 
-    {{ Form::close() }}
+@if (Sentry::check() && Sentry::getUser()->hasAccess('users'))
+    <div class="well">
+        <div class="row-fluid">
+            <button class="btn btn-info" onClick="location.href='{{ URL::to('reports/all') }}'">All Plugins Report</button>
+        </div>
+        <br/>
+        <div class="row-fluid">
+            <button class="btn btn-info" onClick="location.href='{{ URL::to('reports/developers') }}'">Developers Report</button>
+        </div>    
+    </div>
+@endif 
+
 @endsection

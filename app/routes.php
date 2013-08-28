@@ -18,7 +18,11 @@ Route::get('/', function()
 
 Route::controller('users', 'UserController');
 
-Route::resource('reports', 'ReportController');
+Route::get('reports', 'ReportController@home');
+
+Route::get('reports/all', 'ReportController@all');
+
+Route::get('reports/developers', 'ReportController@developers');
 
 Route::resource('groups', 'GroupController');
 
