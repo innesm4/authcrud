@@ -22,7 +22,6 @@
 			</form>
 		</div>
         <div class="span4 pagination" style="margin-top: -5px;">
-            <ul><li>{{ $plugins->links() }}</li></ul>
         </div>
    
         <div class="span4">&nbsp;</div>

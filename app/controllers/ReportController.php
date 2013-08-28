@@ -33,7 +33,9 @@ class ReportController extends PluginsController {
 	 */
 	public function developers()
 	{
-	    $plugins = Plugin::where('id','>=',1) ->orderBy('developer')->paginate(10, array('developer'));
+	    $dev = Plugin::where('id','>=',1)->orderBy('developer')->paginate(10, array('developer'));
+
+	    $plugins = DB::table('plugins')->select('developer')->orderBy('developer')->get();
 
         return View::make('reports.developers')
             ->with('title', 'Reports - List of all Developers')
