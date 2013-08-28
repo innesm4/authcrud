@@ -18,7 +18,7 @@ Route::get('/', function()
 
 Route::controller('users', 'UserController');
 
-Route::resource('search', 'SearchController');
+Route::resource('reports', 'ReportController');
 
 Route::resource('groups', 'GroupController');
 
