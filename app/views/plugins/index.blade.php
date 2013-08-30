@@ -3,6 +3,12 @@
 @section('content')
 	<legend>{{ $title }}&nbsp;
 		<a href="{{ URL::to('plugins/create') }}" class="btn"><i class="icon-plus"></i>&nbsp;Add</a>
+        <form id="custom-search-form" class="form-search form-horizontal pull-right" action="{{ URL::action('ReportController@results') }}" method="get">
+            <div class="input-append span" style="margin-top:7px;">
+                <input type="text" class="search-query" name="name" placeholder="Search Plugins">
+                <button type="submit" class="btn" style="margin-top:2px;"><i class="icon-search"></i></button>
+            </div>
+    </form>
     </legend>
 
     <table class="table table-consended table-striped table-bordered">

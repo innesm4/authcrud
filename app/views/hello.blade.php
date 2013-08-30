@@ -23,6 +23,7 @@ Fifth Ring CRUD App
 	<div class="well">
 		<button class="btn btn-info" onClick="location.href='{{ URL::to('plugins') }}'">View Plugins</button>
 		<button class="btn btn-info" onClick="location.href='{{ URL::to('plugins/create') }}'">Add Plugin</button>
+		<button class="btn btn-info" onClick="location.href='{{ URL::to('reports/search') }}'">Search plugin</button>
 	</div>
 @endif 
 

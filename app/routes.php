@@ -24,6 +24,10 @@ Route::get('reports/all', 'ReportController@all');
 
 Route::get('reports/developers', 'ReportController@developers');
 
+Route::get('reports/search', 'ReportController@search');
+
+Route::get('reports/results', 'ReportController@results');
+
 Route::resource('groups', 'GroupController');
 
 Route::resource('plugins', 'PluginsController');

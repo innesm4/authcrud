@@ -4,7 +4,8 @@
 		"cartalyst/sentry": "2.0.*",
 		"way/generators": "dev-master",
 		"binarix/foundation-pagination": "dev-master",
-		"scalia/sphinxsearch": "dev-master"
+		"scalia/sphinxsearch": "dev-master",
+		"kmd/logviewer": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

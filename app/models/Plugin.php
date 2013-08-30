@@ -43,4 +43,11 @@ class Plugin extends Eloquent {
         $plugin = Plugin::find($id);
         $plugin->delete();
     }
+
+    public function developer()
+    {
+        return $this->hasOne('developer');
+    }
+
+
 }

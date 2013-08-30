@@ -12,6 +12,7 @@
 		<tr> 
             <td style="text-align: center;">{{ $plugin->developer }}</td>
         </tr>
+
 	    @endforeach
 	</table>
 
