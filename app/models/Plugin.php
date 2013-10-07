@@ -46,7 +46,7 @@ class Plugin extends Eloquent {
 
     public function developer()
     {
-        return $this->hasOne('developer');
+        return $this->hasOne('Developer','developer_id');
     }
 
 
